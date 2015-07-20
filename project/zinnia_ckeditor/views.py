@@ -14,7 +14,6 @@ from django.views.generic import View, TemplateView
 from django.core.exceptions import PermissionDenied
 from django.http import HttpResponse, Http404
 from django.template.base import TemplateDoesNotExist
-from django.template.loader import find_template_loader
 
 class StaffuserRequiredMixin(object):
     """
@@ -101,6 +100,7 @@ class EditorTemplatesListView(StaffuserRequiredMixin, View):
         * a dict from the manifest if finded, else an empty dict
         * if manifest is finded, an absolute path to use to find content templates, else None
         """
+        find_template_loader = context.template.engine.find_template_loader
         manifest_filepath = os.path.join(settings.CKEDITOR_EDITOR_TEMPLATES_PATH, settings.CKEDITOR_EDITOR_TEMPLATES_MANIFEST_FILENAME)
         for item in settings.TEMPLATE_LOADERS:
             current_loader = find_template_loader(item)
@@ -156,4 +156,4 @@ class EditorTemplatesListView(StaffuserRequiredMixin, View):
                             paths.append(item_obj)
         
         return paths
-        
+

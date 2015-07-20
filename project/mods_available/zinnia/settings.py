@@ -1,12 +1,18 @@
 # -*- coding: utf-8 -*-
 
 INSTALLED_APPS = add_to_tuple(INSTALLED_APPS,
-    'south',
-    'django.contrib.comments',
-    'tagging',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django_comments',
     'mptt',
+    'tagging',
     'zinnia',
-    'project.zinnia_ckeditor')
+    'project.zinnia_ckeditor'
+)
 
 
 TEMPLATE_CONTEXT_PROCESSORS += (
