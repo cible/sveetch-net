@@ -17,7 +17,5 @@ class EntryWithCkeditor(EntryAdmin):
         models.TextField: {'widget': CKEditorWidget(config_name='zinnia')},
     }
 
-# Unregister the default EntryAdmin
-# then register the EntryWithCkeditor class
-admin.site.unregister(Entry)
+# Register the EntryWithCkeditor class
 admin.site.register(Entry, EntryWithCkeditor)
