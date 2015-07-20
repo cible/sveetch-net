@@ -232,6 +232,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 DOCUMENTS_PAGE_TEMPLATE_DEFAULT = 'default'
 DOCUMENTS_PAGE_RESTRICTED = False
 
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
