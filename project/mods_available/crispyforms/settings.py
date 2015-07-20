@@ -7,4 +7,4 @@ INSTALLED_APPS = add_to_tuple(INSTALLED_APPS, 'crispy_forms', 'crispy_forms_foun
 CRISPY_FAIL_SILENTLY = not DEBUG
 
 # Default layout to use with "crispy_forms"
-CRISPY_TEMPLATE_PACK = 'foundation'
+CRISPY_TEMPLATE_PACK = 'foundation-5'
