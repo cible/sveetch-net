@@ -46,7 +46,7 @@
                     <ul>
                         {% if user.is_staff %}
                             <li><a href="{% url 'admin:index' %}"><i class="icon-darkmoon"></i> {% trans "Django admin" %}</a></li>
-                            <li{% currentwalkthroughto 'documents-board' %} class="active"{% endcurrentwalkthroughto %}><a href="{% url 'documents-board' %}"><i class="icon-file"></i> {% trans "Document management" %}</a></li>
+                            <li{% currentwalkthroughto 'board' %} class="active"{% endcurrentwalkthroughto %}><a href="{% url 'board' %}"><i class="icon-file"></i> {% trans "Document management" %}</a></li>
                             <li class="divider"></li>
                         {% endif %}
                         <li><a href="{% url 'auth_logout' %}"><i class="icon-exit"></i> {% trans "Logout" %}</a></li>
