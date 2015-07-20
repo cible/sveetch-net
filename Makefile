@@ -26,15 +26,15 @@ assets:
 	bin/django-instance assets build --pythonpath=project/
 
 syncdb:
-	bin/django-instance syncdb --all
+	bin/django-instance migrate
 	bin/django-instance migrate --fake
 
 install: build_project syncdb
 
 build_project:
 	virtualenv --no-site-packages --setuptools .
-	bin/pip install --upgrade setuptools
 	bin/pip install --upgrade pip
+	bin/pip install --upgrade setuptools
 	mkdir -p eggs
 	bin/python bootstrap.py
 	bin/buildout -v
